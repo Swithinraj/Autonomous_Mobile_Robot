@@ -1,0 +1,15 @@
+##############################################################################
+#
+# Requirements for sphinx documentation environment. 
+# ROS dependencies are mocked.
+#
+# This file is discovered by the root level
+# .readthedocs.yaml (rtd build) and docenv.bash (local build)
+##############################################################################
+
+Sphinx==5.3.0
+sphinx-argparse==0.4.0
+sphinx_rtd_theme==1.1.1
+py_trees>=2.2
+# Broken - see notes in conf.py
+# sphinx-autodoc-typehints==1.22
