@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>AMR TEAM-2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e0c2091d-62ba-4ed7-9127-5f145d655237" class="page sans"><header><h1 class="page-title">AMR TEAM-2</h1><p class="page-description"></p></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>MS 1 - Assemble Robile and controlling Joypad </strong></summary><div class="indented"><p id="247b1aac-0705-4570-8adc-03d35b8d7eb8" class=""><strong>US 1:</strong></p><p id="64d37b15-ad44-4cd8-84c4-9ef9e553eaf1" class="">As a system builder I want the joypad control software to work for diﬀerent hardware  conﬁgurations of the Robile So that the maintenance of the software is simpliﬁed.</p><p id="91fedb39-91f3-4705-9f16-2546ad6793d6" class=""><strong>Test Case 1: </strong></p><p id="cb4923ac-ef53-487a-a3da-78f57385daf4" class=""><strong>Given</strong>: A Robile is configured and powered on.</p><p id="9634f2c5-f03d-413a-a034-b42932ca98af" class=""><strong>When</strong>: A joystick signal is sent to the Robile.</p><p id="5b667f2e-7df5-4b80-875e-ea6ba839925b" class=""><strong>Then</strong>: The Robile responds by initiating motion, moving accordingly to the joystick commands.</p><p id="0f3a72bc-a135-4448-9f4d-8d184bd608d6" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>MS 2 - Collision Avoidance</strong></summary><div class="indented"><p id="e8946c12-24cb-455a-8426-8ee5a1da1be1" class=""><strong>US 1:</strong></p><p id="5ff69697-a36d-4165-b85a-3a5ff206f912" class="">As a safety engineer I want the Robile not to run into static or dynamic obstacles So that injuries to humans and damages to the environment and the Robile can be avoided.</p><p id="63e6c163-b4a6-4be8-9028-943db1db4e6c" class=""><strong>Test Case 1 - Static Obstacles</strong></p><p id="3072e6c4-d542-4172-a39f-5cfe89ae86e0" class=""><strong>Given</strong>: The Robile is in motion,</p><p id="17ae8908-4429-43bd-816e-eea500fbc5b1" class=""><strong>When</strong>: It encounters objects in its path,</p><p id="1b95fd8f-7ab7-4b11-be89-4c5062659243" class=""><strong>Then</strong>: Robile avoids obstacles and continues following.</p><p id="68e032f3-2736-4e75-bc16-e860268e0cba" class=""><strong>Test Case 2 - Dynamic Obstacles</strong></p><p id="1f995428-6b95-4661-9909-eb52ebfcfd8c" class=""><strong>Given</strong>: The Robile is in motion, and there is a possibility of objects entering its path.</p><p id="fd365300-67b5-49d8-af10-b25c6c8f77a4" class=""><strong>When</strong>: Objects intersect with the Robile&#x27;s path during its movement.</p><p id="ac57197e-6c2b-45fc-ac9c-7de58c7c428b" class=""><strong>Then</strong>: Robile should try to avoid collision and stop when too close to the threshold.</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>MS 3 - Wall Detection and Alignment</strong></summary><div class="indented"><p id="2708dd66-c563-4ad9-8e7d-c89a84c51010" class=""><strong>US 1 </strong>As a behavior developer I want the Robile to be able to find the wall and align to it.</p><p id="a9d0e58f-e4cf-4183-a522-ee7942fd99f4" class=""><strong>Scenario 1: One wall</strong></p><p id="8a6ad431-292e-4cb8-832c-fd7a94d313e1" class=""><strong>Test Case 1:</strong></p><p id="9663d2fa-5d81-41f8-b3be-905efa04bdff" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="695b01d7-1392-4b1d-aac3-2357c6d9adc5" class=""><strong>When: </strong> The Robile is initialized to confront a wall.</p><p id="ed90764a-ceab-42c1-92fc-dddc7331333f" class=""><strong>Then:</strong>  The Robile should align to the wall.</p><p id="2ed4aaae-9f4b-4c94-941c-9b57df60af2f" class=""><strong>Scenario 2: Glass wall</strong></p><p id="9af3f26e-e6f5-4aaa-9834-426dec131eda" class=""><strong>Test Case 1:</strong></p><p id="049904f9-f813-4b07-a75c-de7250ee5d7b" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="fb648add-d987-48c2-b1b0-3ac33d62ed83" class=""><strong>When: </strong> The Robile is initialized to confront a glass wall.</p><p id="1a79701a-1e86-4a36-ae0a-55ae5c5c0ea7" class=""><strong>And: </strong>The glass wall is the closest wall to the Robile.</p><p id="998f48ee-eacb-4cb9-9e28-294d2e54e47a" class=""><strong>Then:</strong>  The Robile should align to the glass wall.</p><p id="ba1c660c-6c02-45e4-935e-ce77d4e96301" class=""><strong>Scenario 3: Parallel wall</strong></p><p id="bb39341a-9dd0-4bc9-b419-f560b67ef069" class=""><strong>Objective:</strong> Test the Robile&#x27;s ability to move in a narrow corridor without getting stuck.</p><p id="98aa0e30-4766-4607-aca2-3cea032b5733" class=""><strong>Test case 1:</strong></p><p id="3cd2e227-2b4f-4dcb-9efa-d14f65d4ff0c" class=""><strong>Given</strong> :  Robile and all its systems are running without problems.</p><p id="b855b47d-0c3f-4ab2-bba0-355614ee2eed" class=""><strong>When: </strong> The Robile is initialized between two parallel walls .</p><p id="b9581e67-19ee-44a6-a113-d819997e7d7d" class=""><strong>And: </strong>The Robile is at equal distance from both.</p><p id="d4500510-a658-4cce-9962-5ad3e723d76d" class=""><strong>Then:</strong>  The Robile should be able to pick one of them to follow.</p><p id="3ce7ecba-6eee-472e-bf36-9ce9dc7c5243" class=""><strong>Test case 2:</strong></p><p id="bae52b53-f560-4dfc-8084-623b264c5336" class=""><strong>Given</strong> :  Robile and all its systems are running without problems.</p><p id="7e6cf0d4-cd90-46a7-bb79-5fc2c6437e73" class=""><strong>When: </strong> The Robile is initialized to confront two parallel walls .</p><p id="cc0d16e1-969c-4ca3-997b-90d15f7845bd" class=""><strong>And: </strong>The Robile is at equal distance from both.</p><p id="bd6b424b-bd6d-4594-a519-85eb69c99ecd" class=""><strong>Then:</strong>  The Robile should be able to move in the corridor and  to pick one of them to follow.</p><p id="f3a5ff5c-a945-4527-b222-5af3c2bbe5d7" class=""><strong>Scenario 4: No walls</strong></p><p id="bf458866-bc80-49f5-97f5-210cd83d201f" class=""><strong>Test Case 1:</strong></p><p id="66e2c944-18a4-470a-8a20-db4ac55613eb" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="dca1224b-f0bb-42a1-800b-bf500fee275e" class=""><strong>When: </strong>The Robile is initialized to have no walls within the Robile’s range.</p><p id="32d62f53-5dce-4370-a1bd-9c9caf377669" class=""><strong>Then: </strong>The Robile rotates clockwise or in the direction where the last wall was found.</p><p id="9ec25aec-ff51-48be-8ed3-cedb9145da7f" class=""><strong>Scenario 5: Corner</strong></p><p id="3fcd3dc9-3e48-48c0-acba-d38260911b26" class=""><strong>Test Case 1: Closed corner</strong></p><p id="6b9b2184-28c5-4415-8262-84255d070704" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="bb26de73-149a-4cb6-ab7e-0273f14df290" class=""><strong>When: </strong> The Robile is initialized to confront a close corner.</p><p id="d3c8c866-55c1-4bcb-bdab-a14faed5e01b" class=""><strong>Then:</strong>  The Robile should align to the nearest wall.</p><p id="2446938c-b235-4a53-81a8-860f207d854f" class=""><strong>Test Case 2:</strong></p><p id="6fb7b67a-ee94-49c1-8611-957aad5d8551" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="a397563f-e646-4fc9-91a6-1510177e94f1" class=""><strong>When: </strong> The Robile is initialized to confront a close corner.</p><p id="07625be3-3c2e-4720-a45f-ac5a4e5a452c" class=""><strong>And </strong>: The two walls are at the same distance.</p><p id="84bfedcd-6cd2-4a23-a2d8-422c17b8a715" class=""><strong>Then:</strong>  The Robile should select one of the walls and align it.</p><p id="4e97ae0f-2afc-49b6-9c10-37e2743f6aa6" class=""><strong>Test Case 3: Open Corner</strong></p><p id="d1bc15fd-05da-4cf8-b509-4a8c668921ca" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="bb332296-74f3-43e7-8da5-00640899f616" class=""><strong>When: </strong> The Robile is initialized to confront an open corner.</p><p id="19cf9512-e8e3-40d7-918e-9fc95fef6e14" class=""><strong>Then:</strong>  The Robile should align to the nearest wall.</p><p id="d9300aa6-9754-4ffe-a4bf-6f94f5321ea6" class=""><strong>Test Case 4:</strong></p><p id="878a191d-a521-40fa-8334-23380c6eb938" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="3fda18b1-0788-4cfc-a6c1-045af9b1560a" class=""><strong>When: </strong> The Robile is initialized to confront an open corner.</p><p id="d6d948ea-bf81-481c-806d-2f56480f646c" class=""><strong>And : </strong>The two walls are at the same distance.</p><p id="d4729d91-271f-43e6-b6c0-ec3833675c7d" class=""><strong>Then:</strong>  The Robile should select one of the walls and align it.</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>MS 4 - Wall Following</strong></summary><div class="indented"><p id="26caecbd-f1da-4ea3-8d74-d465007389b8" class=""><strong>US 4.1 </strong>As a behavior developer I want the Robile to be able to follow the detected nearest wall after aligning.</p><p id="6e6f95fb-6223-424e-aa3d-92a62289bef6" class=""><strong>Scenario 1: One Wall</strong></p><p id="37ab91e6-b3c2-46d2-915d-a9b3c3903960" class=""><strong>Test Case 1:</strong></p><p id="8adc05b6-f534-4dce-95af-37008b6dfbd6" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="ac275c7b-b585-4552-b979-eebcadfd7789" class=""><strong>When: </strong> The Robile is initialized to confront a wall.</p><p id="97503ecd-34e6-4a48-9599-e1e80533689f" class=""><strong>Then:</strong>  The Robile should align to the wall and follow it.</p><p id="d9cff4f1-c70a-47bf-9834-1991d6955e58" class=""><strong>Scenario : Glass wall</strong></p><p id="efc44cf0-b9f0-40ff-af92-e61f23329ba9" class=""><strong>Test Case 1:</strong></p><p id="ecf7f0cd-3b36-46a6-af4e-23434ee38a7b" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="a174c9da-58de-4d12-a786-31df441f21a0" class=""><strong>When: </strong> The Robile is following a wall.</p><p id="078cb7ca-6bd6-4b1e-aaf7-1835586a0070" class=""><strong>And: </strong>The glass wall is encountered in a close corner or open corner.</p><p id="5f804b6c-d911-4ad7-81d1-ef64513089c8" class=""><strong>Then:</strong>  The Robile should detect the glass wall as a normal wall and behave as in case one and two.</p><p id="aa91a07a-1b93-4f56-9ce7-9c669d61c56b" class=""><strong>Scenario 3: Slanted Wall</strong></p><p id="5d2cd18e-8c9f-48c0-b14f-d6dc178d811b" class=""><strong>Test Case 1:</strong></p><p id="789b6ecd-14ba-4f04-bc92-72a716746fe2" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="9b99248e-e571-4eda-be3b-eddf6a7c72f1" class=""><strong>When: </strong> The Robile is following a wall.</p><p id="9c3a7e58-53aa-4303-838b-5caae5cb3801" class=""><strong>And: </strong>An obstacle is encountered.</p><p id="c1582f86-602e-4b34-8aee-14d48520d5b0" class=""><strong>Then:</strong>  The Robile should detect the obstacle and estimate its geometry and maneuver around it.</p><p id="f6790bcb-fa71-401c-bee7-578698d3219b" class=""><strong>Scenario 2: Corner</strong></p><p id="6628ea6d-9b25-49a3-a573-a3b10f25cd40" class=""><strong>Test Case 1:</strong></p><p id="5898b406-8f24-46fc-8c4c-895f78faf286" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="f77832a9-2229-4804-a0f7-84191c246a5c" class=""><strong>When: </strong> The Robile is following a wall and encounters a close corner.</p><p id="061709fe-524f-45c1-a205-19e98f3360d0" class=""><strong>Then:</strong>  The Robile should rotate to follow the new wall.</p><p id="844a61ef-aaae-4fff-9bbc-f2f8e2bded23" class=""><strong>Test Case 2:</strong></p><p id="3d7ad7fa-46b4-47ea-a08e-88d67483d5ab" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="5578f508-c5bd-47c8-a787-825b99fa09b4" class=""><strong>When: </strong> The Robile is following a wall and encounters an open corner.</p><p id="f7d14f09-2b92-4f4d-a34f-6e35fc0f617e" class=""><strong>Then:</strong>   The Robile should rotate to follow the new wall.</p><p id="8468a5d4-0548-4d1b-a237-72e75049a41f" class=""><strong>Scenario 3: Obstacle avoidance</strong></p><p id="24368874-2aff-4c90-9c4e-95399ec9c159" class=""><strong>Test Case 1:</strong></p><p id="5ad8e69a-4e47-4659-ac34-f88de3f269f8" class=""><strong>Given</strong> :  Robile and all its systems are running without problems in a static environment.</p><p id="2f5ed6fe-f9a0-48cd-bd19-bb2a828c9535" class=""><strong>When: </strong> The Robile is following a wall</p><p id="f1a7edb4-9505-4845-8e7b-542156eeec8a" class=""><strong>And: </strong>An obstacle is encountered.</p><p id="94b3709e-e054-42d6-8676-4e57409fd2ef" class=""><strong>Then:</strong>  The Robile should detect the obstacle and estimate its geometry and maneuver around it</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">LIVE Demo Scenarios</summary><div class="indented"><table id="4b1b99e6-1f67-4288-9bbd-65420ccc555c" class="simple-table"><thead class="simple-table-header"><tr id="7a0bbef7-73d8-4afc-bc9e-e69d54e3e8d8"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><strong>Behavior</strong></th><th id="~w&lt;Q" class="simple-table-header-color simple-table-header" style="width:202.4875030517578px"><strong>Test Case</strong></th><th id="AC|x" class="simple-table-header-color simple-table-header" style="width:95.48750305175781px"><strong>Threshold (in m) </strong></th><th id="QR^A" class="simple-table-header-color simple-table-header" style="width:90.48750305175781px"><strong>Distance (in m)</strong></th><th id="uB~Q" class="simple-table-header-color simple-table-header" style="width:101.48750305175781px"><strong>Status</strong></th></tr></thead><tbody><tr id="9b94e742-d63d-4c30-9742-b2a04463bccf"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[move_2bb][follow]</code></mark><mark class="highlight-purple"> </mark><mark class="highlight-purple"><code>[align]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Wall Detection and Alignment</td><td id="AC|x" class="" style="width:95.48750305175781px">0.05 <mark class="highlight-purple"><code>[align]</code></mark></td><td id="QR^A" class="" style="width:90.48750305175781px">≥ 0.35 <mark class="highlight-purple"><code>[move_2bb]</code></mark></td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="b9b2cefa-e860-4537-82c2-925a080212b1"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[follow]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Wall Following</td><td id="AC|x" class="" style="width:95.48750305175781px">0.65-0.55 <mark class="highlight-purple"><code>[follow]</code></mark></td><td id="QR^A" class="" style="width:90.48750305175781px">≥ 0.4 <mark class="highlight-purple"><code>[follow]</code></mark></td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="2633d3ac-ba27-461d-aba7-50ed32cf0c4e"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[align][follow]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Closed Corner</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="d3e54533-8254-4225-921b-faa77c8e6a1a"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[follow]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Open Corner</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="f0cf7c20-dbe4-4fbd-b454-ef6acd24c190"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[follow]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Obstacle Avoidance</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="e3c546d3-d06f-494a-b298-9464e78afc48"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[move_2bb][follow]</code></mark><mark class="highlight-purple"> </mark><mark class="highlight-purple"><code>[align]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Parallel Wall</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="5612346f-1509-4a92-92e3-8b3a610d8d4e"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[stop_motion]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Collision</td><td id="AC|x" class="" style="width:95.48750305175781px">0.25</td><td id="QR^A" class="" style="width:90.48750305175781px">&lt; 0.25</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="5c4b047d-087a-4824-849f-c9b6f0089def"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-purple"><code>[no_wall]</code></mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">No Wall</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><mark class="highlight-teal"><code>[Yes]</code></mark></td></tr><tr id="c49707f7-8abc-4d02-8be8-3eae41fa184f"><th id="Oj~~" class="simple-table-header-color simple-table-header" style="width:139.9625015258789px"><mark class="highlight-red">LIMITATION</mark><mark class="highlight-purple">→ No Specific Behavior </mark></th><td id="~w&lt;Q" class="" style="width:202.4875030517578px">Glass Wall</td><td id="AC|x" class="" style="width:95.48750305175781px">-</td><td id="QR^A" class="" style="width:90.48750305175781px">-</td><td id="uB~Q" class="" style="width:101.48750305175781px"><code>[No]</code> </td></tr></tbody></table></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Behavior Decision Tree</strong></summary><div class="indented"><figure id="1b4baac3-aea7-4cd9-8ecd-12a17aeddebe" class="image"><a href="AMR%20TEAM-2%20e0c2091d62ba4ed791275f145d655237/Untitled.png"><img style="width:1870px" src="AMR%20TEAM-2%20e0c2091d62ba4ed791275f145d655237/Untitled.png"/></a></figure></div></details><blockquote id="0c67b89c-11cd-48c4-87f2-bd90bcb87e83" class="block-color-blue"><a href="https://drive.google.com/drive/folders/1c7tI8YQiqI_9EsnBl0Pn0bAzWQBp5Kl5?usp=sharing">ROBILE_TEST</a></blockquote><p id="9a63a58b-1323-4fc3-b131-b76b7a4681e0" class="">
+</p></div></article></body></html>

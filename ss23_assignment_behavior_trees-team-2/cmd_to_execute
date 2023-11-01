@@ -1,0 +1,15 @@
+rosr
+cd colcon_ws_AMR/
+colcon build
+source install/local_setup.bash
+ros2 launch robile_gazebo gazebo_4_wheel.launch.py
+
+rosf
+cd colcon_ws_AMR/
+source install/local_setup.bash
+colcon build --packages-select autonomous-map-navigate && ros2 launch autonomous_map_navigate gaurav_test_nav.launch.py 
+
+ros2 topic pub /battery_voltage std_msgs/msg/Float32 data:\ 0.0\ 
+
+robot details
+ros2 topic echo /scan

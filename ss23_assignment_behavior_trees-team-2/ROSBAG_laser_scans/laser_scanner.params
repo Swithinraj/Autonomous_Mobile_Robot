@@ -1,0 +1,18 @@
+header:
+stamp:
+sec:1683560616
+nanosec:305215676
+frame_id:base_laser
+angle_min:-2.356194496154785
+angle_max:2.0923497676849365
+angle_increment:0.006135923322290182
+time_increment:9.765625145519152e-05
+scan_time:0.10000000149011612
+range_min:0.019999999552965164
+range_max:5.599999904632568
+ranges:
+
+# Run these in 2 half of terminals
+# -ros2 bag play align_to_wall/
+# -ros2 topic echo --full-length /scan 
+# Then you will get an output of 700 around points, copy them and save in a csv file
